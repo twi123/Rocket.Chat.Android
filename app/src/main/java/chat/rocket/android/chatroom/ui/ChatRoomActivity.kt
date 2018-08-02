@@ -147,7 +147,8 @@ class ChatRoomActivity : AppCompatActivity(), HasSupportFragmentInjector {
             is RoomType.Channel -> {
                 DrawableHelper.getDrawableFromId(R.drawable.ic_hashtag_black_12dp, this)
             }
-            is RoomType.PrivateGroup -> {
+            is RoomType.PrivateGroup,
+            is RoomType.Custom -> {
                 DrawableHelper.getDrawableFromId(R.drawable.ic_lock_black_12_dp, this)
             }
             else -> null

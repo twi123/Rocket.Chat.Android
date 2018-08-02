@@ -66,7 +66,7 @@ class RoomViewHolder(itemView: View, private val listener: (RoomUiModel) -> Unit
     private fun getRoomDrawable(type: RoomType, alert: Boolean): Drawable? {
         return when(type) {
             is RoomType.Channel -> if (alert) channelUnread else channel
-            is RoomType.PrivateGroup -> if (alert) groupUnread else group
+            is RoomType.PrivateGroup, is RoomType.Custom -> if (alert) groupUnread else group
             else -> null
         }
     }
