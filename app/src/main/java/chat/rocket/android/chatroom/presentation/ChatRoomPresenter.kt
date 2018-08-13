@@ -262,7 +262,7 @@ class ChatRoomPresenter @Inject constructor(
                 // ignore message for now, will receive it on the stream
                 val id = UUID.randomUUID().toString()
                 val message = if (messageId == null) {
-                    val username = userHelper.username()
+                    val username = userHelper.user()?.username
                     val newMessage = Message(
                         id = id,
                         roomId = chatRoomId,
